@@ -23,6 +23,7 @@ SAAP/
 │   ├── aap_utils.py             # Helper functions and model wrappers
 │   ├── random_attack.py         # Random attack utilities for toy experiments
 │   └── random_pipeline.py       # Attack pipeline management
+├── adv_examples/                # Directory for adversarial examples (empty by default)
 ├── art/                         # Adversarial Robustness Toolbox (minimal version)
 │   ├── attacks/
 │   │   └── evasion/
@@ -31,9 +32,12 @@ SAAP/
 │   │       └── dpatch_robust.py      # Robust D-Patch attack implementation
 │   ├── estimators/              # Model estimators (PyTorch YOLO support)
 │   └── ...                      # Other essential ART components
+├── dataset/                     # Dataset directory (empty by default)
 ├── models/                      # YOLO model configurations
 │   └── hub/                     # Predefined YOLO architectures
+├── result_pipeline/             # Evaluation results directory (empty by default)
 ├── utils/                       # General utilities and tools
+├── weights/                     # Model weights directory (empty by default)
 ├── attack_advpatch.py          # Standard adversarial patch attack script
 ├── attack_dpatch.py            # D-Patch attack script
 ├── attack_robustdpatch.py      # Robust D-Patch attack script
