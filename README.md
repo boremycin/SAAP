@@ -1,4 +1,4 @@
-# AAP: Adversarial Attenutation Patch for SAR objector
+# AAP: Adversarial Attenutation Patch against SAR Object Detection Model
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -10,7 +10,7 @@ This is the official PyTorch implements of the **AAP (Adversarial Attenuation Pa
 
 - **AAP Method**: Our novel Adversarial Attenuation Patch approach for SAR objector
 - **Multiple Benchmark Methods Support**: Includes AdvPatch, DPatch and RobustDPatch attacks supported By ART.
-- **YOLOv5 Integration**: Seamless integration with YOLO series object detection models
+- **YOLO Integration**: Seamless integration with YOLO series object detection models
 - **Modular Design**: Clean architecture for easy extension and experimentation
 - **Evaluation Tools**: Built-in metrics and visualization for attack effectiveness assessment
 
@@ -28,8 +28,8 @@ SAAP/
 │   ├── attacks/
 │   │   └── evasion/
 │   │       ├── adversarial_patch/    # Standard adversarial patch attack
-│   │       ├── dpatch.py             # D-Patch attack implementation
-│   │       └── dpatch_robust.py      # Robust D-Patch attack implementation
+│   │       ├── dpatch.py             # DPatch attack implementation
+│   │       └── dpatch_robust.py      # Robust DPatch attack implementation
 │   ├── estimators/              # Model estimators (PyTorch YOLO support)
 │   └── ...                      # Other essential ART components
 ├── dataset/                     # Dataset directory (empty by default)
@@ -39,8 +39,8 @@ SAAP/
 ├── utils/                       # General utilities and tools
 ├── weights/                     # Model weights directory (empty by default)
 ├── attack_advpatch.py          # Standard adversarial patch attack script
-├── attack_dpatch.py            # D-Patch attack script
-├── attack_robustdpatch.py      # Robust D-Patch attack script
+├── attack_dpatch.py            # DPatch attack script
+├── attack_robustdpatch.py      # RobustDPatch attack script
 ├── attackv1.py                 # Integrated development version (for learning ART interfaces)
 ├── attackv2.py                 # Standard production version (using AAP method)
 ├── detect_ship.py              # Ship detection example
@@ -70,24 +70,11 @@ pip install -r requirements.txt
 
 ### Usage Examples
 
-#### Running AAP Attack (Standard Version)
-```bash
-python attackv2.py
-```
+#### Running supported attacking methods
 
-#### Running D-Patch Attack
-```bash
-python attack_dpatch.py
-```
-
-#### Running Robust D-Patch Attack
-```bash
-python attack_robustdpatch.py
-```
-
-#### Running Standard Adversarial Patch Attack
-```bash
+```Bash
 python attack_advpatch.py
+python attackv2.py
 ```
 
 
