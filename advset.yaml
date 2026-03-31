@@ -1,0 +1,7 @@
+path: ./dataset
+train: train/images
+val: adv_val/images
+
+names:
+  0: ships
+  1: others

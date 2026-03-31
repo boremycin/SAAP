@@ -1,0 +1,22 @@
+{
+    "git.ignoreLimitWarning": true,
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.typeCheckingMode": "off", 
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportPrivateImportUsage": "none", 
+        "reportAttributeAccessIssue": "none", 
+        "reportArgumentType": "none",
+        "reportUndefinedVariable": "none",
+        "reportCallIssue": "none",
+        "reportMissingImports": "none",
+    },
+   
+    "python.terminal.activateEnvironment": true,
+    "editor.formatOnSave": true, 
+    "editor.wordBasedSuggestions": "off",
+    "editor.quickSuggestionsDelay": 10,
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda"
+}
