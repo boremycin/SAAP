@@ -4,7 +4,7 @@
 
 This is the official PyTorch implements of the **AAP (Adversarial Attenuation Patch)** method and integrates with popular attack algorithms from the Adversarial Robustness Toolbox (ART).
 
-![framework1](https://raw.githubusercontent.com/boremycin/ImageBed/master/framework1.png)
+![framework2](https://raw.githubusercontent.com/boremycin/ImageBed/master/framework2.png)
 
 
 ## 📌 Key Features
