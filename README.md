@@ -2,13 +2,15 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the The platform implements the **AAP (Adversarial Attenuation Patch)** method and integrates with popular attack algorithms from the Adversarial Robustness Toolbox (ART).
+This is the official PyTorch implements of the **AAP (Adversarial Attenuation Patch)** method and integrates with popular attack algorithms from the Adversarial Robustness Toolbox (ART).
+
+![20260331151538](https://raw.githubusercontent.com/boremycin/ImageBed/master/20260331151538.png)
 
 ## 📌 Key Features
 
-- **AAP Method**: Our novel Adversarial Attenuation Patch approach for robust adversarial attacks
-- **Multiple Attack Support**: Includes D-Patch, Robust D-Patch, and standard Adversarial Patch attacks
-- **YOLOv5 Integration**: Seamless integration with YOLOv5 object detection models
+- **AAP Method**: Our novel Adversarial Attenuation Patch approach for SAR objector
+- **Multiple Benchmark Methods Support**: Includes AdvPatch, DPatch and RobustDPatch attacks supported By ART.
+- **YOLOv5 Integration**: Seamless integration with YOLO series object detection models
 - **Modular Design**: Clean architecture for easy extension and experimentation
 - **Evaluation Tools**: Built-in metrics and visualization for attack effectiveness assessment
 
@@ -19,12 +21,12 @@ SAAP/
 ├── aap_utils/                    # Core utilities and custom implementations
 │   ├── adv_attenuation_patch.py  # AAP (Adversarial Attenuation Patch) implementation
 │   ├── aap_utils.py             # Helper functions and model wrappers
-│   ├── random_attack.py         # Random attack utilities
+│   ├── random_attack.py         # Random attack utilities for toy experiments
 │   └── random_pipeline.py       # Attack pipeline management
 ├── art/                         # Adversarial Robustness Toolbox (minimal version)
 │   ├── attacks/
 │   │   └── evasion/
-│   │       ├── adversarial_patch/    # Standard adversarial patch attacks
+│   │       ├── adversarial_patch/    # Standard adversarial patch attack
 │   │       ├── dpatch.py             # D-Patch attack implementation
 │   │       └── dpatch_robust.py      # Robust D-Patch attack implementation
 │   ├── estimators/              # Model estimators (PyTorch YOLO support)
@@ -84,31 +86,14 @@ python attack_robustdpatch.py
 python attack_advpatch.py
 ```
 
-## 📝 Methodology
-
-### AAP (Adversarial Attenuation Patch)
-
-Our proposed AAP method combines attenuation-based optimization with patch-based adversarial attacks to achieve robust performance against object detection models. The key innovations include:
-
-- [Your methodology details here]
-
-### Comparison with Existing Methods
-
-| Method | Robustness | Transferability | Physical Realizability |
-|--------|------------|-----------------|----------------------|
-| AAP (Ours) | High | High | Excellent |
-| D-Patch | Medium | Medium | Good |
-| Robust D-Patch | High | Medium | Good |
-| Standard Adversarial Patch | Low | Low | Fair |
 
 ## 📊 Evaluation
 
 The platform provides comprehensive evaluation metrics including:
 
-- False Positive Rate (FPR)
 - False Negative Rate (FNR) 
-- Attack Success Rate (ASR)
-- Detection confidence reduction
+- False Positives Per Image (FPPI)
+- mAP and detection confidence reduction
 
 Run evaluation with:
 ```bash
@@ -129,17 +114,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you use SAAP in your research, please cite our work:
 
 ```bibtex
-@article{your-paper,
-  title={SAAP: Smart Adversarial Attack Platform with Adversarial Attenuation Patch},
-  author={Your Name},
-  journal={Journal Name},
+@article{Zhang2026SAAP,
+  title={Towards Physically Realizable Adversarial Attenuation Patch against SAR Object Detection},
+  author={Yiming, Zhang},
+  journal={},
   year={2026}
 }
 ```
 
 ## 🔒 Disclaimer
 
-This software is intended for research and educational purposes only. Users are responsible for ensuring compliance with applicable laws and regulations when using adversarial attack techniques.
+This code is intended for research and educational purposes only. Users are responsible for ensuring compliance with applicable laws and regulations when using adversarial attack techniques.
 
 ## Acknowledgments
 - This project heavily utilizes the [Adversarial Robust Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox) for implementing benchmark adversarial  patch methods like AdvPatch, DPatch and RobustDPatch.
