@@ -1,19 +1,19 @@
-# AAP: Adversarial Attenutation Patch against SAR Object Detection Model
+# AAP: Adversarial Attenuation Patch against SAR Object Detection Model
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the official PyTorch implements of the **AAP (Adversarial Attenuation Patch)** method and integrates with popular attack algorithms from the Adversarial Robustness Toolbox (ART).
+This is the official PyTorch implementation of the **AAP (Adversarial Attenuation Patch)** method and integrates with popular attack algorithms from the Adversarial Robustness Toolbox (ART).
 
 ![framework2](https://raw.githubusercontent.com/boremycin/ImageBed/master/framework2.png)
 
 
 ## 📌 Key Features
 
-- **AAP Method**: Our novel Adversarial Attenuation Patch approach for SAR objector
-- **Multiple Benchmark Methods Support**: Includes AdvPatch, DPatch and RobustDPatch attacks supported By ART.
-- **YOLO Integration**: Seamless integration with YOLO series object detection models
-- **Modular Design**: Clean architecture for easy extension and experimentation
-- **Evaluation Tools**: Built-in metrics and visualization for attack effectiveness assessment
+- **AAP Method**: A novel Adversarial Attenuation Patch approach for SAR object detection.
+- **Multiple Benchmark Methods**: Supports standard attacks including AdvPatch, DPatch, and RobustDPatch via ART.
+- **YOLO Integration**: Seamless integration with YOLO-based object detection models.
+- **Modular Design**: Clean and extensible architecture for research and experimentation.
+- **Evaluation Tools**: Built-in metrics and visualization for assessing attack performance.
 
 ## 📁 Project Structure
 
@@ -25,7 +25,7 @@ SAAP/
 │   ├── random_attack.py         # Random attack utilities for toy experiments
 │   └── random_pipeline.py       # Attack pipeline management
 ├── adv_examples/                # Directory for adversarial examples (empty by default)
-├── art/                         # Adversarial Robustness Toolbox (minimal version)
+├── art/                         # Minimal integrated components from the Adversarial Robustness Toolbox (ART)
 │   ├── attacks/
 │   │   └── evasion/
 │   │       ├── adversarial_patch/    # Standard adversarial patch attack
@@ -55,7 +55,7 @@ SAAP/
 
 - Python 3.8+
 - PyTorch 2.2.2
-- YOLOv5 7.0.14
+- YOLOv5 (Ultralytics implementation)
 - CUDA (optional, for GPU acceleration)
 
 ### Installation
@@ -71,11 +71,13 @@ pip install -r requirements.txt
 
 ### Usage Examples
 
-#### Running supported attacking methods
+#### Run supported attacking methods
 
 ```Bash
 python attack_advpatch.py
-python attackv2.py
+python attack_dpatch.py
+python attack_robustdpatch.py
+python attackv2.py  # AAP method
 ```
 
 
@@ -103,14 +105,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📚 Citation
 
-If you use SAAP in your research, please cite our work:
+If you use AAP in your research, please cite our work:
 
 ```bibtex
 @article{Zhang2026SAAP,
-  title={Towards Physically Realizable Adversarial Attenuation Patch against SAR Object Detection},
-  author={Yiming, Zhang},
-  journal={},
-  year={2026}
+  title   = {Towards Physically Realizable Adversarial Attenuation Patch against SAR Object Detection},
+  author  = {Yiming Zhang and Weibo Qin and Feng Wang},
+  journal = {arXiv preprint arXiv:2604.00887},
+  year    = {2026}
 }
 ```
 
@@ -119,5 +121,6 @@ If you use SAAP in your research, please cite our work:
 This code is intended for research and educational purposes only. Users are responsible for ensuring compliance with applicable laws and regulations when using adversarial attack techniques.
 
 ## Acknowledgments
-- This project heavily utilizes the [Adversarial Robust Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox) for implementing benchmark adversarial  patch methods like AdvPatch, DPatch and RobustDPatch.
-- The object detection model is based on [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5).
+- This project makes extensive use of the [Adversarial Robustness Toolbox](https://github.com/Trusted-AI/adversarial-robustness-toolbox) (ART) for implementing standard adversarial patch methods, including AdvPatch, DPatch, and RobustDPatch.
+- The object detection backbone is based on  [Ultralytics YOLOv5](https://github.com/ultralytics/yolov5).
+  
